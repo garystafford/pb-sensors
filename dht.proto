@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package dht;
+
+import "google/protobuf/timestamp.proto";
+
+message Sensor {
+    string device = 1;
+    string type = 2;
+    google.protobuf.Timestamp timestamp = 3;
+    Data data = 4;
+}
+
+message Data {
+    float temperature = 1;
+    float humidity = 2;
+}
+
+//message SensorRequest {
+//}
+//
+//message SensorResponse {
+//    Sensor sensor = 1;
+//}
+//
+//message RecordSensorDataResponse {
+//}
+//
+//service SensorService {
+//    rpc Sensor (SensorRequest) returns (SensorResponse);
+//    rpc RecordSensorData (Sensor) returns (RecordSensorDataResponse);
+//}
