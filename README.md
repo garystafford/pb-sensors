@@ -1,4 +1,5 @@
+# DHT Sensor Protocol Buffers
+
 ```bash
-python -m grpc_tools.protoc -I../../protos \
-        --python_out=. --grpc_python_out=. ../../protos/route_guide.proto
+protoc -I=. --python_out=. ./dht.proto
 ```
