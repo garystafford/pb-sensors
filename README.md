@@ -1,5 +1,5 @@
-# DHT Sensor Protocol Buffers
+# Protocol Buffers: Sensors
 
 ```bash
-protoc -I=. --python_out=. ./dht.proto
+protoc -I=. --python_out=. ./sensors.proto
 ```

@@ -1,19 +1,30 @@
 syntax = "proto3";
 
-package dht;
+package sensors;
 
 import "google/protobuf/timestamp.proto";
 
-message Sensor {
+message SensorDHT { // DHT22
     string device = 1;
     string type = 2;
     google.protobuf.Timestamp timestamp = 3;
-    Data data = 4;
+    DataDHT data = 4;
 }
 
-message Data {
+message DataDHT {
     float temperature = 1;
     float humidity = 2;
+}
+
+message SensorPIR { // Onyehn_PIR
+    string device = 1;
+    string type = 2;
+    google.protobuf.Timestamp timestamp = 3;
+    DataPIR data = 4;
+}
+
+message DataPIR {
+    bool motion = 1;
 }
 
 //message SensorRequest {
