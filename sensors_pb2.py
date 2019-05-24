@@ -13,7 +13,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensors',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rsensors.proto\x12\x07sensors\x1a\x1fgoogle/protobuf/timestamp.proto\"x\n\tSensorDHT\x12\x0e\n\x06\x64\x65vice\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12-\n\ttimestamp\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.sensors.DataDHT\"0\n\x07\x44\x61taDHT\x12\x13\n\x0btemperature\x18\x01 \x01(\x02\x12\x10\n\x08humidity\x18\x02 \x01(\x02\"x\n\tSensorPIR\x12\x0e\n\x06\x64\x65vice\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12-\n\ttimestamp\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.sensors.DataPIR\"\x19\n\x07\x44\x61taPIR\x12\x0e\n\x06motion\x18\x01 \x01(\x08\x62\x06proto3')
-  ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\rsensors.proto\x12\x07sensors\"\\\n\tSensorDHT\x12\x0e\n\x06\x64\x65vice\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x01\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.sensors.DataDHT\"0\n\x07\x44\x61taDHT\x12\x13\n\x0btemperature\x18\x01 \x01(\x01\x12\x10\n\x08humidity\x18\x02 \x01(\x01\"\\\n\tSensorPIR\x12\x0e\n\x06\x64\x65vice\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x01\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.sensors.DataPIR\"\x19\n\x07\x44\x61taPIR\x12\x0e\n\x06motion\x18\x01 \x01(\x08\"\\\n\tSensorDLI\x12\x0e\n\x06\x64\x65vice\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x01\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.sensors.DataDLI\"\x18\n\x07\x44\x61taDLI\x12\r\n\x05light\x18\x01 \x01(\x08\x62\x06proto3')
+)
 
 
 
@@ -51,8 +49,8 @@ _SENSORDHT = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='sensors.SensorDHT.timestamp', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -75,8 +73,8 @@ _SENSORDHT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59,
-  serialized_end=179,
+  serialized_start=26,
+  serialized_end=118,
 )
 
 
@@ -89,14 +87,14 @@ _DATADHT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='temperature', full_name='sensors.DataDHT.temperature', index=0,
-      number=1, type=2, cpp_type=6, label=1,
+      number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='humidity', full_name='sensors.DataDHT.humidity', index=1,
-      number=2, type=2, cpp_type=6, label=1,
+      number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -113,8 +111,8 @@ _DATADHT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=229,
+  serialized_start=120,
+  serialized_end=168,
 )
 
 
@@ -141,8 +139,8 @@ _SENSORPIR = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='sensors.SensorPIR.timestamp', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -165,8 +163,8 @@ _SENSORPIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=231,
-  serialized_end=351,
+  serialized_start=170,
+  serialized_end=262,
 )
 
 
@@ -196,18 +194,102 @@ _DATAPIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=353,
-  serialized_end=378,
+  serialized_start=264,
+  serialized_end=289,
 )
 
-_SENSORDHT.fields_by_name['timestamp'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+
+_SENSORDLI = _descriptor.Descriptor(
+  name='SensorDLI',
+  full_name='sensors.SensorDLI',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='device', full_name='sensors.SensorDLI.device', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='sensors.SensorDLI.type', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='sensors.SensorDLI.timestamp', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='sensors.SensorDLI.data', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=291,
+  serialized_end=383,
+)
+
+
+_DATADLI = _descriptor.Descriptor(
+  name='DataDLI',
+  full_name='sensors.DataDLI',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='light', full_name='sensors.DataDLI.light', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=385,
+  serialized_end=409,
+)
+
 _SENSORDHT.fields_by_name['data'].message_type = _DATADHT
-_SENSORPIR.fields_by_name['timestamp'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _SENSORPIR.fields_by_name['data'].message_type = _DATAPIR
+_SENSORDLI.fields_by_name['data'].message_type = _DATADLI
 DESCRIPTOR.message_types_by_name['SensorDHT'] = _SENSORDHT
 DESCRIPTOR.message_types_by_name['DataDHT'] = _DATADHT
 DESCRIPTOR.message_types_by_name['SensorPIR'] = _SENSORPIR
 DESCRIPTOR.message_types_by_name['DataPIR'] = _DATAPIR
+DESCRIPTOR.message_types_by_name['SensorDLI'] = _SENSORDLI
+DESCRIPTOR.message_types_by_name['DataDLI'] = _DATADLI
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SensorDHT = _reflection.GeneratedProtocolMessageType('SensorDHT', (_message.Message,), dict(
@@ -237,6 +319,20 @@ DataPIR = _reflection.GeneratedProtocolMessageType('DataPIR', (_message.Message,
   # @@protoc_insertion_point(class_scope:sensors.DataPIR)
   ))
 _sym_db.RegisterMessage(DataPIR)
+
+SensorDLI = _reflection.GeneratedProtocolMessageType('SensorDLI', (_message.Message,), dict(
+  DESCRIPTOR = _SENSORDLI,
+  __module__ = 'sensors_pb2'
+  # @@protoc_insertion_point(class_scope:sensors.SensorDLI)
+  ))
+_sym_db.RegisterMessage(SensorDLI)
+
+DataDLI = _reflection.GeneratedProtocolMessageType('DataDLI', (_message.Message,), dict(
+  DESCRIPTOR = _DATADLI,
+  __module__ = 'sensors_pb2'
+  # @@protoc_insertion_point(class_scope:sensors.DataDLI)
+  ))
+_sym_db.RegisterMessage(DataDLI)
 
 
 # @@protoc_insertion_point(module_scope)

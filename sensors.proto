@@ -2,24 +2,24 @@ syntax = "proto3";
 
 package sensors;
 
-import "google/protobuf/timestamp.proto";
-
-message SensorDHT { // DHT22
+// DHT22
+message SensorDHT {
     string device = 1;
     string type = 2;
-    google.protobuf.Timestamp timestamp = 3;
+    double timestamp = 3;
     DataDHT data = 4;
 }
 
 message DataDHT {
-    float temperature = 1;
-    float humidity = 2;
+    double temperature = 1;
+    double humidity = 2;
 }
 
-message SensorPIR { // Onyehn_PIR
+// Onyehn_PIR
+message SensorPIR {
     string device = 1;
     string type = 2;
-    google.protobuf.Timestamp timestamp = 3;
+    double timestamp = 3;
     DataPIR data = 4;
 }
 
@@ -27,17 +27,14 @@ message DataPIR {
     bool motion = 1;
 }
 
-//message SensorRequest {
-//}
-//
-//message SensorResponse {
-//    Sensor sensor = 1;
-//}
-//
-//message RecordSensorDataResponse {
-//}
-//
-//service SensorService {
-//    rpc Sensor (SensorRequest) returns (SensorResponse);
-//    rpc RecordSensorData (Sensor) returns (RecordSensorDataResponse);
-//}
+// Anmbest_MD46N
+message SensorDLI {
+    string device = 1;
+    string type = 2;
+    double timestamp = 3;
+    DataDLI data = 4;
+}
+
+message DataDLI {
+    bool light = 1;
+}
